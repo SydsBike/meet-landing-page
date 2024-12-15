@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Frontend Mentor | Meet landing page</title>
+	</head>
+	<body>
+		<header class="primary-header">
+			<img src="./assets/logo.svg" alt="" class="logo" />
+		</header>
+		<main class="main">
+			<section class="hero">
+				<picture class="hero-picture">
+					<source srcset="./assets/desktop/image-hero-left.png" media="(min-width: 900px)" />
+					<img src="./assets/tablet/image-hero.png" alt="" class="hero-image" />
+				</picture>
+				<div class="hero-text">
+					<h1 class="fs-h1 fc-900 fw-900">Group Chat for Everyone</h1>
+					<p>Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
+					<div class="hero-btns">
+						<button class="btn btn-blue">
+							<a href="">Download <span class="btn-span">v1.3</span></a>
+						</button>
+						<button class="btn"><a href="">What is it?</a></button>
+					</div>
+				</div>
+				<picture class="right">
+					<img src="./assets/desktop/image-hero-right.png" alt="" class="right" />
+				</picture>
+			</section>
+			<secion class="primary-content">
+				<div class="primary-content-wrapper">
+					<img src="./assets/desktop/number1.svg" alt="" class="icon-number-1" />
+					<div class="gallery">
+						<img src="./assets/desktop/image-woman-in-videocall.jpg" alt="" />
+						<img src="./assets/desktop/image-women-videochatting.jpg" alt="" />
+						<img src="./assets/desktop/image-men-in-meeting.jpg" alt="" />
+						<img src="./assets/desktop/image-man-texting.jpg" alt="" />
+					</div>
+					<div class="primary-content-text">
+						<h2 class="fs-h2 fw-900 fc-600 lrg-sp">BUILT FOR MODERN USE</h2>
+						<h3 class="fs-h3 fw-900 fc-900">Smarter meetings, all in one place</h3>
+						<p>Send messages, share files, show your screen, and record your meetings — all in one workspace. Control who can join with invite-only team access, data encryption, and data export.</p>
+					</div>
+					<img src="./assets/desktop/number.svg" alt="" class="icon-number-2" />
+				</div>
+			</secion>
+		</main>
+		<footer class="primary-footer"></footer>
+	</body>
+</html>

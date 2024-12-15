@@ -1,0 +1,336 @@
+:root {
+	/* custom colors */
+	--clr-cyan-300: hsl(192, 90%, 77%);
+	--clr-cyan-600: hsl(192, 37%, 48%);
+	--clr-purple-300: hsl(268, 100%, 86%);
+	--clr-purple-600: hsl(268, 34%, 53%);
+
+	--clr-slate-300: hsl(240, 18%, 85%);
+	--clr-slate-600: hsl(240, 10%, 57%);
+	--clr-slate-900: hsl(240, 21%, 20%);
+
+	--clr-white: hsl(0, 0%, 98%);
+
+	/* typography */
+
+	--ff-primary: "Red Hat Display", sans-serif;
+
+	--fs-100: 1rem;
+	--fluid-12-16: clamp(0.75rem, 0.662rem + 0.3756vw, 1rem);
+	--fluid-16-18: clamp(1rem, 0.956rem + 0.1878vw, 1.125rem);
+	--fluid-16-32: clamp(1rem, 0.6479rem + 1.5023vw, 2rem);
+	--fluid-32-40: clamp(2rem, 1.8239rem + 0.7512vw, 2.5rem);
+	--fluid-32-80: clamp(2rem, 0.9437rem + 4.507vw, 5rem);
+	--fluid-40-64: clamp(2.5rem, 1.9718rem + 2.2535vw, 4rem);
+	--fluid-48-80: clamp(3rem, 2.2958rem + 3.0047vw, 5rem);
+
+	--fluid-image-147\.5-256: clamp(9.2188rem, 6.831rem + 10.1878vw, 16rem);
+
+	--fw-medium: 500;
+	--fw-900: 900;
+
+	/* spacing */
+
+	--sp-50: 0.25rem;
+	--sp-100: 0.5rem;
+	--sp-200: 1rem;
+	--sp-300: 1.5rem;
+	--sp-400: 2rem;
+	--sp-500: 2.5rem;
+	--sp-700: 3.5rem;
+	--sp-800: 4rem;
+	--sp-900: 4.5rem;
+	--sp1000: 5rem;
+	--sp1400: 7rem;
+
+
+	--fluid-space-16-17: clamp(1rem, 0.978rem + 0.0939vw, 1.0625rem);
+	--fluid-space-16-32: clamp(1rem, 0.6479rem + 1.5023vw, 2rem);
+	--fluid-space-24-32: clamp(1.5rem, 1.3239rem + 0.7512vw, 2rem);
+	--fluid-space-32-56: clamp(2rem, 1.4718rem + 2.2535vw, 3.5rem);
+	--fluid-space-32-64: clamp(2rem, 1.2958rem + 3.0047vw, 4rem);
+	--fluid-space-48-80: clamp(3rem, 2.2958rem + 3.0047vw, 5rem);
+	--fluid-space-0-56: clamp(0rem, -1.2324rem + 5.2582vw, 3.5rem);
+	--fluid-space-48-72: clamp(3rem, 2.4718rem + 2.2535vw, 4.5rem);
+	--fluid-space-64-72: clamp(4rem, 3.8239rem + 0.7512vw, 4.5rem);
+	--fluid-space-32-80: clamp(2rem, 0.9437rem + 4.507vw, 5rem);
+}
+
+/* css reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+* {
+	margin: 0;
+	padding: 0;
+	font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
+}
+
+/* Set core body defaults */
+html,
+body {
+	height: 100%;
+	line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+input,
+label {
+	line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+	text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+	color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+	max-width: 100%;
+	display: inline-block;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+	min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+	scroll-margin-block: 5ex;
+}
+
+/* utility classes */
+
+.visually-hidden {
+	/* clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px; */
+	display: none;
+}
+
+@media (min-width: 600px) {
+	.visually-hidden {
+		display: block;
+	}
+}
+
+.fs-h1 {
+	font-size: var(--fluid-40-64);
+}
+.fs-h2 {
+	font-size: var(--fluid-12-16);
+}
+
+.fs-h3 {
+	font-size: var(--fluid-32-40);
+}
+
+.fc-100 {
+	color: var(--clr-white);
+}
+
+.fc-p300 {
+	color: var(--clr-purple-300);
+}
+
+.fc-b300 {
+	color: var(--clr-cyan-300);
+}
+
+.fc-600 {
+	color: var(--clr-cyan-600);
+}
+
+.fc-900 {
+	color: var(--clr-slate-900);
+}
+
+.fw-900 {
+	font-weight: var(--fw-900);
+}
+
+.lrg-sp {
+	letter-spacing: var(--sp-50);
+}
+.txt-preset-4 {
+	font-size: var(--fs-200);
+	letter-spacing: 0;
+	line-height: 110%;
+}
+
+/* component */
+
+.btn {
+	font-size: 1rem;
+	font-weight: var(--fw-900);
+	color: var(--clr-white);
+	background-color: var(--clr-purple-600);
+	padding: 1rem 2.5rem;
+	border: none;
+	border-radius: 1.8125rem;
+	line-height: 1.5;
+
+	& a {
+		text-decoration: none;
+	}
+}
+
+.btn-blue {
+	background-color: var(--clr-cyan-600);
+}
+
+.btn-span {
+	color: var(--clr-cyan-300);
+}
+
+/* general styling */
+
+body {
+	font-family: var(--ff-primary);
+	font-size: var(--fluid-16-18);
+	font-weight: var(--fw-medium);
+	color: var(--clr-slate-600);
+	text-align: center;
+}
+
+
+
+
+/* header */
+
+.primary-header {
+	display: flex;
+	justify-content: center;
+	margin-top: var(--fluid-space-48-80);
+}
+
+
+
+/* hero */
+
+.hero {
+	margin-top: 4rem;
+}
+
+.hero-image {
+	margin: 0 auto;
+}
+
+.hero-text {
+	width: min(calc(100% - 4.375rem), 448px);
+	margin: var(--fluid-space-48-72) auto 0;
+	min-width: 305px;
+	display: grid;
+	gap: var(--fluid-space-24-32);
+}
+
+.hero-btns {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: var(--fluid-space-16-17);
+}
+
+.right {
+	display: none;
+}
+
+
+@media (min-width: 900px) {
+
+	.right{ 
+		display: block;
+	}
+	.hero {
+		display: flex;
+		gap: 1rem;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.hero-text {
+		margin-top: 0;
+	}
+	
+}
+
+
+/* primary-content */
+
+.primary-content-wrapper {
+	width: calc(100% - var(--fluid-space-32-80));
+	margin: 0 auto;
+	padding-top: var(--fluid-space-32-56);
+	margin-top: var(--fluid-space-32-64);
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: var(--fluid-space-16-32);
+	margin: 4rem auto;
+}
+
+.gallery img {
+	width: clamp(9rem, 6.5352rem + 10.5164vw, 16rem);
+	height: auto;
+	border-radius: .5rem;
+  }
+
+
+  .primary-content-text {
+	max-width: 544px;
+	margin: 0 auto;
+
+
+  }
+
+  .primary-content-text h3 {
+	padding-top: 1rem;
+  }
+
+  .primary-content-text p {
+	
+	padding-inline: .75rem;
+	margin-block: 2rem var(--fluid-space-64-72);
+  }
